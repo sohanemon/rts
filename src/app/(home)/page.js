@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Card from './Card';
 import { Hero } from './Hero';
 import Quote from './Quote';
+import LatestArticle from './LatestArticle';
 
 export default function Home() {
   return (
@@ -75,6 +76,8 @@ export default function Home() {
           height={600}
         />
       </div>
+      <br />
+      <LatestArticle />
     </main>
   );
 }
