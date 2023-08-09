@@ -1,6 +1,6 @@
-import { cn } from '~/lib/utils';
 import Image from 'next/image';
 import GreenLine from '~/components/ui/GreenLine';
+import { cn } from '~/lib/utils';
 
 export default function Quote({ className, ...props }) {
   return (
