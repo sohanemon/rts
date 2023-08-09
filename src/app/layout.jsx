@@ -2,6 +2,7 @@ import Navbar from '~/components/Navbar';
 import './globals.css';
 
 import localFont from 'next/font/local';
+import Footer from '~/components/Footer';
 
 const nova = localFont({
   src: '../fonts/Regulator Nova.otf',
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
       <body className={`${nova.className} ${nova.variable} ${roc.variable}`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
