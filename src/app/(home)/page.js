@@ -1,40 +1,13 @@
 import Image from 'next/image';
 import Button from '~/components/Button';
-import { Navbar } from '~/components/Navbar';
+import { Hero } from './Hero';
+import Quote from './Quote';
 
 export default function Home() {
   return (
-    <main className='flex flex-col items-center justify-between min-h-screen bg-white'>
-      <div className='relative w-full h-screen text-white bg-fixed bg-center bg-no-repeat bg-cover bg-rts-banner'>
-        <Navbar />
-        <div className='absolute flex flex-col items-center w-full px-20 text-center top-1/3 gap-y-6'>
-          <Image
-            width={409}
-            height={161}
-            src='/img/rts_logo_dark.svg'
-            alt='RTS Logo Dark'
-          />
-          <div className='text-[2.75rem] font-bold leading-[46px] drop-shadow-md'>
-            A Comprehensive Closed-loop Approach to Sustainability & Circular
-            Economy
-          </div>
-        </div>
-      </div>
-      <div className='w-full h-[25rem] bg-theme-dark text-white relative p-[120px]'>
-        <div className='relative w-1/2'>
-          <Image
-            className='absolute left-[-70px] top-[-70px]'
-            width={68}
-            height={230}
-            src='/img/quote_mark.svg'
-            alt='quote mark'
-          />
-          <div className='text-3xl'>
-            The RTS approach features low environmental impact of textile
-            production and consumption.
-          </div>
-        </div>
-      </div>
+    <main className='flex flex-col items-center justify-between min-h-screen'>
+      <Hero />
+      <Quote />
       <section className='flex w-full max-w-[1440px]'>
         <div className='w-[47%]'>
           <div className='w-[110%] relative left-[15%] top-[-2rem] z-10 bg-theme text-theme-dark px-10 py-12'>
