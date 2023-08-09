@@ -1,10 +1,10 @@
 'use client';
 
-import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import Brand from './ui/brand';
+import { cn } from '~/lib/utils';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

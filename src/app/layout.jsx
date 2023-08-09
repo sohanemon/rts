@@ -1,8 +1,8 @@
-import Navbar from '~/components/Navbar';
 import './globals.css';
 
 import localFont from 'next/font/local';
 import Footer from '~/components/Footer';
+import Navbar from '~/components/Navbar';
 
 const nova = localFont({
   src: '../fonts/Regulator Nova.otf',
