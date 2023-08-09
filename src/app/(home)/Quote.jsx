@@ -5,15 +5,15 @@ import { cn } from '~/lib/utils';
 export default function Quote({ className, ...props }) {
   return (
     <section className='relative w-full bg-secondary'>
-      <GreenLine className={'bottom-0'} />
       <div
         className={cn(
-          'w-full h-[25rem] bg-theme-dark container lg:px-32 flex items-center text-white relative ',
+          'w-full h-[25rem] relative bg-theme-dark container lg:px-32 flex items-center text-white ',
           className,
           {}
         )}
         {...props}
       >
+        <GreenLine className={'bottom-0'} />
         <div className='relative '>
           <Image
             className='max-sm:scale-[80%]'
