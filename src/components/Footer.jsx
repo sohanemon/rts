@@ -15,8 +15,8 @@ export default function Footer() {
         <div className='flex flex-col text-dark gap-y-1 md:gap-y-8 max-md:text-center'>
           <a className='text-xl font-bold leading-6'>info@retain2sustain.com</a>
           <p className='text-base font-medium leading-6 max-md:mt-6'>
-            <p>7TH FL., 186 NANKING E. RD., SEC. 4,</p>
-            <p>SONGSHAN DIST., TAIPEI 10595, TAIWAN</p>
+            <span>7TH FL., 186 NANKING E. RD., SEC. 4,</span>
+            <span>SONGSHAN DIST., TAIPEI 10595, TAIWAN</span>
           </p>
           <p className='text-base font-medium leading-6'>
             <a>TEL 886-2-25786188</a>
