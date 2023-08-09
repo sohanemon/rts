@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'],
-  content: ['app/**/*.{ts,tsx}', 'components/**/*.{ts,tsx}'],
+  content: ['src/**/*.{js,jsx}'],
   theme: {
     container: {
       center: true,
@@ -12,8 +12,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        nunito: 'var(--nunito)',
-        canela: 'var(--canela)',
+        nova: 'var(--nova)',
+        roc: 'var(--roc)',
       },
       colors: {
         border: 'hsl(var(--border))',
