@@ -6,7 +6,7 @@ export function Hero() {
       <Image
         width={1409}
         height={888}
-        className='object-cover w-full max-h-[888px]'
+        className='object-cover w-full max-h-[888px] min-h-[600px]'
         src='/img/rts_banner.jpg'
         alt='RTS Logo Dark'
       />
@@ -15,7 +15,7 @@ export function Hero() {
           width={409}
           height={161}
           src='/img/rts_logo_dark.svg'
-          className=''
+          className=' max-sm:scale-[80%]'
           alt='RTS Logo Dark'
         />
         <h2 className='text-2xl lg:text-[2.75rem] max-w-4xl mt-12 font-bold leading-[46px] drop-shadow-md'>

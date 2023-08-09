@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <section className='container absolute inset-x-0 top-0 z-10 py-10'>
       <nav className='flex items-center justify-between '>
-        <Brand />
+        <Brand className={'max-sm:hidden'} />
         <NavContent />
         {!isMenuOpen ? (
           <span
