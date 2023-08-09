@@ -5,7 +5,7 @@ import Quote from './Quote';
 
 export default function Home() {
   return (
-    <main className='flex flex-col items-center justify-between min-h-screen'>
+    <main className='flex flex-col items-center justify-between'>
       <Hero />
       <Quote />
       <section className='flex w-full max-w-[1440px]'>
