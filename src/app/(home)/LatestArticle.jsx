@@ -7,7 +7,7 @@ export default function LatestArticle() {
         <div className='w-[393px] mb-10 text-slate-900 text-[44px] font-bold leading-[56px]'>
           Latest articles
         </div>
-        <div className='flex gap-10 pb-8 overflow-x-auto flex-nowrap'>
+        <div className='flex gap-10 pb-8 overflow-x-auto cursor-grab active:cursor-grabbing flex-nowrap '>
           <Article />
           <Article />
           <Article />
