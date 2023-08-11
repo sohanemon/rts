@@ -2,6 +2,7 @@ import Hero from './Hero';
 import Mission from './Mission';
 import Quote from './Quote';
 import RetainSustain from './RetainSustain';
+import RiThaiSection from './RiThaiSection';
 import SendMessage from './SendMessage';
 import Vision from './Vision';
 
@@ -14,6 +15,7 @@ export default function AboutPage() {
       <Mission />
       <Quote className={'mt-28'} />
       <SendMessage />
+      <RiThaiSection />
     </section>
   );
 }
