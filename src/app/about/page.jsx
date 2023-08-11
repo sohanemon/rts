@@ -2,6 +2,7 @@ import Hero from './Hero';
 import Mission from './Mission';
 import Quote from './Quote';
 import RetainSustain from './RetainSustain';
+import SendMessage from './SendMessage';
 import Vision from './Vision';
 
 export default function AboutPage() {
@@ -12,6 +13,7 @@ export default function AboutPage() {
       <Vision />
       <Mission />
       <Quote className={'mt-28'} />
+      <SendMessage />
     </section>
   );
 }
