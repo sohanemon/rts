@@ -1,14 +1,15 @@
-import GreenLine from '~/components/ui/GreenLine';
 import Hero from './Hero';
+import Mission from './Mission';
 import RetainSustain from './RetainSustain';
-import Heading from '~/components/ui/Heading';
+import Vision from './Vision';
 
 export default function AboutPage() {
   return (
     <section>
       <Hero />
       <RetainSustain />
-      <Heading />
+      <Vision />
+      <Mission />
     </section>
   );
 }
