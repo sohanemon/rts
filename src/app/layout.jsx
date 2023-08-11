@@ -1,6 +1,7 @@
 import './globals.css';
 
 import localFont from 'next/font/local';
+import BackToTop from '~/components/BackToTop';
 import Footer from '~/components/Footer';
 import Navbar from '~/components/Navbar';
 
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
+        <BackToTop />
       </body>
     </html>
   );

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import GreenLine from '~/components/ui/GreenLine';
 
 export function Hero() {
   return (
@@ -6,7 +7,7 @@ export function Hero() {
       <Image
         width={1409}
         height={888}
-        className='object-cover w-full max-h-[888px] min-h-[600px]'
+        className='hero'
         src='/img/rts_banner.jpg'
         alt='RTS Logo Dark'
       />
@@ -23,6 +24,7 @@ export function Hero() {
           Economy
         </h2>
       </div>
+      <GreenLine className={'bottom-0'} />
     </div>
   );
 }

@@ -4,7 +4,7 @@ import { Hero } from './Hero';
 import Quote from './Quote';
 import LatestArticle from './LatestArticle';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main className='flex flex-col items-center justify-between'>
       <Hero />

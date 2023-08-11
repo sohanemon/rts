@@ -62,3 +62,8 @@
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 }
+@layer components {
+  .hero {
+    @apply object-cover w-full max-h-[688px] min-h-[500px];
+  }
+}
