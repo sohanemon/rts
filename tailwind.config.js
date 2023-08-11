@@ -12,8 +12,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        nova: 'var(--nova)',
-        roc: 'var(--roc)',
+        nova: ['regulator-nova', 'sans-serif'],
+        roc: ['roc-grotesk', 'sans-serif'],
       },
       colors: {
         border: 'hsl(var(--border))',

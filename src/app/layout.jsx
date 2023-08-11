@@ -1,20 +1,8 @@
 import './globals.css';
 
-import localFont from 'next/font/local';
 import BackToTop from '~/components/BackToTop';
 import Footer from '~/components/Footer';
 import Navbar from '~/components/Navbar';
-
-const nova = localFont({
-  src: '../fonts/Regulator Nova.otf',
-  display: 'swap',
-  variable: '--nova',
-});
-const roc = localFont({
-  src: '../fonts/roc grotesk.ttf',
-  display: 'swap',
-  variable: '--roc',
-});
 
 export const metadata = {
   title: 'Retain to Sustain',
@@ -25,7 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={`${nova.className} ${nova.variable} ${roc.variable}`}>
+      <head>
+        <link rel='stylesheet' href='https://use.typekit.net/hjz7sjo.css' />
+      </head>
+      <body>
         <Navbar />
         {children}
         <Footer />
