@@ -41,10 +41,11 @@ const NavContent = () => {
           <li
             key={_.name}
             className={cn('', {
-              '': _.href === '/' ? path === '/' : path.includes(_.href),
+              'text-primary':
+                _.href === '/' ? path === '/' : path.includes(_.href),
             })}
           >
-            <h3 className='capitalize'>
+            <h3 className={cn('font-bold capitalize')}>
               <Link href={_.href}>{_.name}</Link>
             </h3>
           </li>
