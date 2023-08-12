@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import GreenDiv from '~/components/GreenDiv';
 import { cn } from '~/lib/utils';
 
@@ -15,17 +16,25 @@ export default function CardSection({ className, ...props }) {
         {...props}
       >
         {data.map((item) => (
-          <div key={item.label} className=''>
-            <div className='relative'>
+          <Link
+            href={
+              '/rts-solutions/' +
+              item.label.toLocaleLowerCase().replaceAll(' ', '-')
+            }
+            key={item.label}
+            className='block group active:scale-95 transition-all '
+          >
+            <div className='relative overflow-hidden'>
               <Image
                 src={`https://www.figma.com/file/pdMmQA7oofF140rRjcwhKW/image/652e3227a8976a0d48f20e01b997fdce5ec9a237`}
                 alt=''
+                className='group-hover:scale-125 scale-110 transition-all w-full h-full duration-1000 ease-out'
                 width={600}
                 height={360}
               />{' '}
               <div className='absolute inset-0 grid px-12 m-auto bg-black/40 place-content-center'>
                 <p className='text-center font-roc text-primary text-[34px] font-medium leading-[38px]'>
-                  Low Carbon Footprint Monofilament
+                  {item.label}
                 </p>
               </div>
             </div>
@@ -34,7 +43,7 @@ export default function CardSection({ className, ...props }) {
                 {item.caption}
               </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

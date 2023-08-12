@@ -12,7 +12,7 @@ export default function Banner({
   return (
     <section
       className={cn(
-        'absolute inset-0 flex flex-col justify-center container',
+        'absolute inset-0 font-roc flex flex-col justify-center container',
         className,
         {}
       )}
@@ -26,7 +26,7 @@ export default function Banner({
       >
         {caption}
       </p>
-      <h1 className='max-w-5xl my-6 text-foreground [&>p]:px-2 [&>p]:bg-primary [&>p]:w-fit text-[64px] font-bold leading-[64px]'>
+      <h1 className='max-w-5xl my-6  text-foreground [&>p]:px-2 [&>p]:bg-primary [&>p]:w-fit text-[64px] font-bold leading-[64px]'>
         {label.map((text) => (
           <p key={text}>{text}</p>
         ))}

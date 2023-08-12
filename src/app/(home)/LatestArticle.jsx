@@ -1,5 +1,5 @@
 'use client';
-import Article from '~/components/article';
+import Card from '~/components/card';
 import { useHorizontalScroll } from '~/hook/scroll';
 
 export default function LatestArticle() {
@@ -14,13 +14,13 @@ export default function LatestArticle() {
           ref={scrollRef}
           className='flex gap-10 pb-8 overflow-x-auto flex-nowrap '
         >
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
+          <Card dark />
+          <Card dark />
+          <Card dark />
+          <Card dark />
+          <Card dark />
+          <Card dark />
+          <Card dark />
         </div>
       </div>
     </section>
