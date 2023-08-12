@@ -1,11 +1,11 @@
-'use client';
 import Hero from './Hero';
-import { useHorizontalScroll } from '~/hook/scroll';
 import Card from '~/components/card';
+import Brand from '~/components/ui/brand';
+import Article from '~/components/article';
+import Text from '~/components/ui/Text';
 
-import Section from '../../../components/Section';
+import Section from '~/components/Section';
 export default function LowCarbonFootprintMonofilamentPage() {
-  const scrollRef = useHorizontalScroll();
   return (
     <section>
       <Hero />
@@ -24,14 +24,38 @@ export default function LowCarbonFootprintMonofilamentPage() {
           </>
         }
       />
-      <div
-        ref={scrollRef}
-        className='flex gap-10 pb-8 container mb-32 overflow-x-auto flex-nowrap '
-      >
+      <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 pb-8 container mb-32 overflow-x-auto '>
         <Card />
         <Card />
         <Card />
-        <Card />
+      </div>
+      <Article
+        image='https://www.figma.com/file/pdMmQA7oofF140rRjcwhKW/image/d8de8d2666c29e666f1ef291a93a1820a075de2e'
+        text=' RTS is committed to creating various possibilities for hollow
+          monofilament, expanding its practical applications, and achieving
+          energy-saving and carbon reduction in every aspect.'
+      />
+      <Section
+        image={`https://www.figma.com/file/pdMmQA7oofF140rRjcwhKW/image/0c87f255555d47a66575aede2a11a8bbf85b1555`}
+        extra={
+          <>
+            <Text bold>Our efforts and goals</Text>
+            <br />
+            We aim to reduce the diameter of hollow monofilament, pursue higher
+            hollow rate, while maintaining the desired performance targets.
+          </>
+        }
+      />
+      <div className='flex flex-col gap-14 mb-24 items-center text-center max-w-4xl mx-auto'>
+        <Brand />
+        <h2 className=' text-center  text-2xl md:text-[40px] font-roc font-medium  md:leading-[60px]'>
+          Welcome to join the RTS energy-saving and carbon reduction initiative
+          together.
+        </h2>
+      </div>
+      <div className='flex flex-wrap justify-center gap-10 pb-8 container mb-32  '>
+        <Card dark />
+        <Card dark />
       </div>
     </section>
   );

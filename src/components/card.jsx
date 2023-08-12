@@ -1,16 +1,19 @@
 import Image from 'next/image';
 import { cn } from '~/lib/utils';
 
-export default function Card({ dark }) {
+export default function Card({ dark, white, className }) {
   return (
     <div
       className={cn(
         'max-w-lg px-4 overflow-hidden w-full  rounded-lg shrink-0 bg-zinc-100',
-        { 'bg-secondary': dark }
+        { 'bg-secondary': dark, 'bg-white': white },
+        className
       )}
     >
       <Image
-        className='object-cover w-full scale-x-110 h-80'
+        className={cn(
+          'object-cover w-full scale-x-110 h-80 border-b-[10px] border-primary'
+        )}
         src={`https://s3-alpha-sig.figma.com/img/6eff/e5a0/1aba9801ef9fe412ac0b3045d0119c77?Expires=1692576000&Signature=TO8nI8I5oxySe0p~gfWtLo6-9Sigw6xv8CsRcpflA9HY97gTbZwu2pz6A9oY3edDqiOpB2tc5WYB~RhQ-3Le6rya-3RT50VOD6kQ~VTEqNJ0lYymLhRyeeAnnESRK5aizq1WLrdtdMPRqGRz-0xZKNxxSIiWV5uKdbE7c-9GHl9ePhjM6T6LfwQf6CP~5U36niym8IEjx9FAycQlOcZR1GUEos2ozoeQQaRiaKmhCHxjn8QUD-45FjS9oP-1XMyHC3B46I7IotzDhxSx0WpboYwOmmjLh2UQTGkNx3ix72l8Y211evDqqilQQw5Fk5ljz-NMl1iwamjEXUJv97b1cw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4`}
         alt=''
         width={100}
