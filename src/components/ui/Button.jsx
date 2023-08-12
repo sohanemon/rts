@@ -4,10 +4,10 @@ export default function Button({ className, ...props }) {
   return (
     <button
       className={cn(
-        'text-[17px] bg-primary text-background font-semibold py-3 rounded-full px-10',
+        'text-[17px] bg-primary hover:bg-primary/80 text-background font-semibold py-3 rounded-full px-10',
         className,
         {
-          'bg-secondary text-primary': props.secondary,
+          'bg-secondary text-primary hover:bg-secondary/80': props.secondary,
         }
       )}
       {...props}
