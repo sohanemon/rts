@@ -4,7 +4,7 @@ import Button from './ui/Button';
 export default function Footer() {
   return (
     <>
-      <div className='min-h-[340px] md:px-32 bg-secondary flex gap-10 flex-col justify-center items-center'>
+      <div className='min-h-[340px] font-roc md:px-32 bg-secondary flex gap-10 flex-col justify-center items-center'>
         <p className='text-white md:text-5xl max-w-screen-md text-center text-2xl font-medium leading-[30px]'>
           Join RTS to strive together for textile circularity and beyond?
         </p>
