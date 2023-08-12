@@ -66,4 +66,17 @@
   .hero {
     @apply object-cover w-full max-h-[688px] min-h-[500px];
   }
+  /* any thing inside will be dark */
+  .overlay {
+    position: relative;
+  }
+
+  .overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    @apply bg-black/30;
+  }
 }
