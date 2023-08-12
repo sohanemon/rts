@@ -12,15 +12,15 @@ export default function LatestArticle() {
         </div>
         <div
           ref={scrollRef}
-          className='flex gap-10 pb-8 overflow-x-auto flex-nowrap '
+          className='flex [&>*]:basis-2/5 gap-10 pb-8 overflow-x-auto flex-nowrap '
         >
-          <Card white />
-          <Card white />
-          <Card white />
-          <Card white />
-          <Card white />
-          <Card white />
-          <Card white />
+          <Card white noStripe />
+          <Card white noStripe />
+          <Card white noStripe />
+          <Card white noStripe />
+          <Card white noStripe />
+          <Card white noStripe />
+          <Card white noStripe />
         </div>
       </div>
     </section>

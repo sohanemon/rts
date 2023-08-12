@@ -3,6 +3,7 @@ import Article from '~/components/article';
 import Card from '~/components/card';
 import Text from '~/components/ui/Text';
 import Hero from './Hero';
+import Image from 'next/image';
 export default function MonofilamentWithImprovedRecyclabilityPage() {
   return (
     <section>
@@ -36,8 +37,21 @@ export default function MonofilamentWithImprovedRecyclabilityPage() {
         <Card white />
         <Card white />
       </div>{' '}
+      <div className='relative h-fit'>
+        <Image
+          className='w-full min-h-[500px] max-md:object-cover'
+          src={`/img/tennis.png`}
+          alt=''
+          width={1440}
+          height={800}
+        />
+        <p className='text-center absolute inset-0 z-10 grid place-content-center md:text-[40px] md:leading-[60px] font-roc translate-y-9 text-white text-2xl font-medium leading-[30px]'>
+          Despite the advantages of single-material design, there are still many
+          challenges.
+        </p>
+      </div>
       <Section
-        className='md:flex md:[&_img]:w-[500px] '
+        className='md:flex md:[&_img]:w-[500px]  '
         image={`https://s3-alpha-sig.figma.com/img/d6d6/b081/75d547f2b4f1c020c19e69ac50e13b57?Expires=1692576000&Signature=quDRhHP3Ljh8O~RuegAHXuPAYk9KNtMi1KXQZw3xB8FIdOmaSahMr31h96ugtGcKkpiiWo56VJs0SHnjRFLratcGM-i7jlmABUxlBFAdDR-rw9pP4~JueIrI612TGO~d-pP-Il0SF5IheFT2mVH9DIQf2Nnwtbge3ctawavR0ZdWh-EqL8LNaWL13A45kUeHghejx3nHJ0bFtWJuhbv8HlP6lO9qrn9oVqSHOxjMhBJz748Lups0dkKZgGs4-kLnAzd1DVapAJvUznyDXA2DMSR7WYeWURW4lVlJ7JiVxeUQmCcO-NVZ9rzJL65UPG1MSy~6xjpx9uIMOsbxnhRwNA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4`}
         extra={
           <>
@@ -54,7 +68,7 @@ export default function MonofilamentWithImprovedRecyclabilityPage() {
             waste.
           </>
         }
-      />{' '}
+      />
     </section>
   );
 }
