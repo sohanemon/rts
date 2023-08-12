@@ -8,7 +8,7 @@ export default function RiThaiSection({ className, ...props }) {
     <section className={cn('', className, {})} {...props}>
       <div className='relative h-96 bg-zinc-300'>
         <Image
-          src={`/img/rectangle.png`}
+          src={`https://s3-alpha-sig.figma.com/img/c4d0/efa9/9615cc467d6eb4bdb1418e45170e97dc?Expires=1692576000&Signature=nQk2PnKFNvJqUwq56kzP02XVcTvhyTzelfBhdSPTc8eRd~fn4Ejv-6WMex634cKw8qV8SmCip4XddsaFTN3hINWiFV1VyP4k1w176EbhWTr31CGMsm-XAPq8ymhhlBpZ2Ov6kOKN8X6MJ7e1~Fm3VbsNgLgNS75XeFVVHH1ms4988Lg~Py2INj7NTxbV64v6B9Al05hVuHzDcbcDH8Q91JCfO4CHS9s1KG5RjBhdMxQaUgdnBVyQK8EfvIDpPUFbMfrWjDvPrIl0cRitsuQHg3f3NcCHD1PlkFAxT~Svomf6vR6~6B3xmzaSTdcqzxkRgRu4yC5DE8LSpxwdaq-WGg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4`}
           className='object-cover w-full h-full'
           alt=''
           width={1024}
