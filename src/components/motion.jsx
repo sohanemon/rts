@@ -25,8 +25,8 @@ const withVariants = (Comp) => (props) => {
       viewport={{ once: !props.always }}
       transition={{
         delay: 0.1,
-        duration: 0.2,
-        type: 'spring',
+        duration: 0.4,
+        type: 'tween',
         ...props.transition,
       }}
       {...props}
