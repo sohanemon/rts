@@ -1,19 +1,18 @@
-import { useTransform } from 'framer-motion';
-import { useScroll } from 'framer-motion';
-import { useRef } from 'react';
+import { useScroll, useTransform } from 'framer-motion';
 
 const useScrollTransform = ({
+  target,
   inputRange = [0, 1],
   outputRange,
   offset = ['start end', 'end end'],
 }) => {
-  const target = useRef(null);
   const { scrollYProgress } = useScroll({
     target,
     offset,
   });
+
   const motionValue = useTransform(scrollYProgress, inputRange, outputRange);
-  return { target, motionValue };
+  return motionValue;
 };
 
 export default useScrollTransform;

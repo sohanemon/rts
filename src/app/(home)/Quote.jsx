@@ -1,14 +1,15 @@
 'use client';
 import Image from 'next/image';
+import { useRef } from 'react';
 import Motion from '~/components/motion';
 import GreenLine from '~/components/ui/GreenLine';
 import useScrollTransform from '~/hook/scroll-transform';
 import { cn } from '~/lib/utils';
 
 export default function Quote({ className, ...props }) {
-  const { target, motionValue: x } = useScrollTransform({
-    outputRange: [400, 0],
-  });
+  const target = useRef(null);
+  const x = useScrollTransform({ target, outputRange: [-600, 0] });
+  const opacity = useScrollTransform({ target, outputRange: [0, 1] });
   return (
     <section ref={target} className='relative w-full bg-secondary'>
       <div
@@ -20,7 +21,7 @@ export default function Quote({ className, ...props }) {
         {...props}
       >
         <GreenLine className={'bottom-0'} />
-        <Motion asChild style={{ x }}>
+        <Motion asChild style={{ x, opacity }}>
           <div className='relative '>
             <Image
               className='max-sm:scale-[80%]'
