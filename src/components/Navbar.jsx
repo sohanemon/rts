@@ -73,7 +73,7 @@ const NavContentMob = ({ setIsMenuOpen }) => {
 
 const nav = [
   { name: 'About Retain to Sustain', href: '/about' },
-  { name: 'News', href: '/news' },
+  { name: 'Issues', href: '/issues' },
   { name: 'RTS Solutions', href: '/rts-solutions' },
   { name: 'FAQ', href: '/faq' },
   { name: 'Contact', href: '/contact' },

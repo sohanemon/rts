@@ -66,6 +66,20 @@
   .hero {
     @apply object-cover w-full max-h-[688px] min-h-[500px];
   }
+  .clipped {
+    clip-path: polygon(
+      100% 0,
+      100% 68%,
+      85% 76%,
+      74% 81%,
+      58% 87%,
+      45% 91%,
+      30% 95%,
+      15% 98%,
+      0 100%,
+      0 0
+    );
+  }
   /* any thing inside will be dark */
   .overlay {
     position: relative;

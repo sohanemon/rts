@@ -8,14 +8,14 @@ export default function Hero({ className, ...props }) {
     <section className={cn('relative ', className, {})} {...props}>
       <Motion>
         <Image
-          src={`https://www.figma.com/file/pdMmQA7oofF140rRjcwhKW/image/5e08281d0aab96cae010e0ad7554391d80bd5daf?fuid=1054711048882236085`}
+          src={`https://www.figma.com/file/pdMmQA7oofF140rRjcwhKW/image/820fdc66e2f2517bb1e55fa250e06175c0d09712?fuid=1054711048882236085`}
           alt=''
           className='hero clipped'
           width={1400}
           height={900}
         />
       </Motion>
-      <Banner label={['FAQ']} />
+      <Banner label={['Issues']} />
     </section>
   );
 }
