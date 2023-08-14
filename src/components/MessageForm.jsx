@@ -5,10 +5,12 @@ import Button from './ui/Button';
 export default function MessageForm({ className, ...props }) {
   return (
     <section
-      className={cn('px-5 py-8  lg:px-32 lg:py-24', className, {})}
+      className={cn('px-5 py-8  lg:px-32 lg:py-24', className, {
+        'max-w-2xl mx-auto lg:px-8 lg:py-8 lg:my-16': props.contactPage,
+      })}
       {...props}
     >
-      <div className='md:text-[40px] mb-6 text-3xl font-bold leading-9'>
+      <div className='md:text-[40px] mb-6 font-roc text-3xl font-bold leading-9'>
         Send us a message
       </div>
       <div className='space-y-3.5'>
