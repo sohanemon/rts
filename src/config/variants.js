@@ -5,4 +5,10 @@ export const defaultVariants = {
   down: { y: 300, opacity: 0 },
   hidden: { opacity: 0 },
   visible: { x: 0, y: 0, opacity: 1 },
+  stagger: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+    },
+  },
 };

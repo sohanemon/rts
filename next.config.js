@@ -10,6 +10,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'www.figma.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+      },
     ],
   },
 };
