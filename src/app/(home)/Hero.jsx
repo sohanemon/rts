@@ -1,16 +1,19 @@
 import Image from 'next/image';
+import ParallaxHero from '~/components/parallax-hero';
 import GreenLine from '~/components/ui/GreenLine';
 
 export function Hero() {
   return (
-    <div className='relative flex flex-col items-center w-full text-center text-white gap-y-6 co'>
-      <Image
-        width={1409}
-        height={888}
-        className='hero'
-        src='/img/rts_banner.jpg'
-        alt='RTS Logo Dark'
-      />
+    <div className='relative flex flex-col overflow-hidden items-center w-full text-center text-white gap-y-6 co'>
+      <ParallaxHero className={'w-full'}>
+        <Image
+          width={1409}
+          height={888}
+          className='hero'
+          src='/img/rts_banner.jpg'
+          alt='RTS Logo Dark'
+        />
+      </ParallaxHero>
       <div className='absolute inset-0 flex flex-col items-center justify-center '>
         <Image
           width={409}
