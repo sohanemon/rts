@@ -9,7 +9,7 @@ export default function FaqPage() {
 
       <Accordion.Root
         collapsible
-        type='single'
+        type='multiple'
         className='max-w-5xl mx-auto space-y-6 p-5'
       >
         {' '}
