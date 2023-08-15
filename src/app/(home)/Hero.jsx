@@ -6,13 +6,21 @@ export function Hero() {
   return (
     <div className='relative flex flex-col overflow-hidden items-center w-full text-center text-white gap-y-6 co'>
       <ParallaxHero className={'w-full'}>
-        <Image
+        <video
+          className='hero w-full min-h-[500px]'
+          autoPlay
+          muted
+          loop
+          src='/bg.mp4'
+        >
+        </video>
+        {/* <Image
           width={1409}
           height={888}
           className='hero'
           src='/bg.gif'
           alt='RTS Logo Dark'
-        />
+        /> */}
       </ParallaxHero>
       <div className='absolute inset-0 flex flex-col items-center justify-center '>
         <Image
