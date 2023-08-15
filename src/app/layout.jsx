@@ -3,6 +3,7 @@ import './globals.css';
 import BackToTop from '~/components/BackToTop';
 import Footer from '~/components/Footer';
 import Navbar from '~/components/Navbar';
+import TransitionProvider from '~/context/transition';
 
 export const metadata = {
   title: 'Retain to Sustain',
@@ -18,7 +19,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Navbar />
-        {children}
+        <TransitionProvider>{children}</TransitionProvider>
         <Footer />
         <BackToTop />
       </body>

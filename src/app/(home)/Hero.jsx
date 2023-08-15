@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import ParallaxHero from '~/components/parallax-hero';
 import GreenLine from '~/components/ui/GreenLine';
+import bg from './bg.webp';
 
 export function Hero() {
   return (
@@ -10,7 +11,7 @@ export function Hero() {
           width={1409}
           height={888}
           className='hero'
-          src='/img/rts_banner.jpg'
+          src='/bg.gif'
           alt='RTS Logo Dark'
         />
       </ParallaxHero>
