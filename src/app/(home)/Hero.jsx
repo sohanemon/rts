@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import ParallaxHero from '~/components/parallax-hero';
 import GreenLine from '~/components/ui/GreenLine';
-import bg from './bg.webp';
 
 export function Hero() {
   return (
