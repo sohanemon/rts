@@ -10,7 +10,7 @@ export default function TransitionProvider({ children }) {
   const path = usePathname();
   const containerRef = useRef(null);
   return (
-    <AnimatePresence initial={false}>
+    <AnimatePresence mode='wait'>
       <motion.div
         ref={containerRef}
         initial={{ x: -1000, opacity: 0 }}
