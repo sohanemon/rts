@@ -10,10 +10,10 @@ export function Hero() {
           className='hero w-full min-h-[500px]'
           autoPlay
           muted
+          poster='https://s3-figma-videos-production-sig.figma.com/video/1194573512930976251/TEAM/3b1e/f521/-ff1b-4977-ac7e-f1dd3821b618?Expires=1693180800&Signature=ViTVsm4jcujjsRdkoGQq5ixXPw9AawjvRbjG4KUISsQTJ0qiIVgIsAPEf01hDoPcVAdpGvy3E56YU8LHcyVVuIA-4Nw4ZyNzrE-we-WHPavBlqu3ankwrXwaTHIZCTaD3L0D5JEPfB~nwVVWxat2O7Dude2aFILaASM-5XtfoEttrVpq5Ob844Exh3rVszuPEg5lcnqlZ4VVtjN9PDNFLaoW0ogkU0BDCMB-FGdNvcgCh2jo9KScotslUNl6Oy75HW0jNKNVoVbzRwsbGFSDWNks0APr9hOQzuafThwg0lRjQFn1bI~Fi40xdl-lmmBWBYQevBQ1hYbS9M-I8eFHVQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
           loop
           src='/bg.mp4'
-        >
-        </video>
+        ></video>
         {/* <Image
           width={1409}
           height={888}
