@@ -1,12 +1,13 @@
 'use client';
 
+import { AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import Brand from './ui/brand';
 import { cn } from '~/lib/utils';
 import Motion from './motion';
-import { AnimatePresence } from 'framer-motion';
+import Brand from './ui/brand';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,21 +16,20 @@ export default function Navbar() {
       <nav className='flex items-center justify-between '>
         <Brand className={'max-sm:hidden self-start'} />
         <NavContent />
-        {!isMenuOpen ? (
-          <span
+        {!isMenuOpen && (
+          <Image
+            src={'/img/menu.svg'}
+            alt='open menu'
+            width={30}
+            height={30}
             onClick={() => setIsMenuOpen(true)}
-            size={36}
-            className='cursor-pointer lg:hidden text-foreground'
-          />
-        ) : (
-          <span
-            onClick={() => setIsMenuOpen(false)}
-            size={36}
-            className='cursor-pointer lg:hidden text-foreground'
+            className='cursor-pointer lg:hidden ml-auto text-foreground'
           />
         )}
       </nav>
-      {isMenuOpen && <NavContentMob setIsMenuOpen={setIsMenuOpen} />}
+      <AnimatePresence>
+        {isMenuOpen && <NavContentMob setIsMenuOpen={setIsMenuOpen} />}
+      </AnimatePresence>
     </section>
   );
 }
@@ -87,17 +87,69 @@ const NavContent = () => {
 };
 
 const NavContentMob = ({ setIsMenuOpen }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
   return (
     <>
-      <ul className='absolute inset-x-0 flex flex-col items-start lg:hidden'>
+      <Motion
+        initial='up'
+        exit='up'
+        className='fixed bg-primary overflow-y-auto list-none p-7 inset-0 flex flex-col lg:hidden'
+      >
+        <Image
+          src={'/img/x.svg'}
+          alt='open menu'
+          width={23}
+          height={23}
+          onClick={() => {
+            setIsMenuOpen(false);
+            setIsExpanded(false);
+          }}
+          className='cursor-pointer lg:hidden mb-12 mt-1 ml-auto text-foreground'
+        />
         {nav.map((_) => (
-          <li onClick={() => setIsMenuOpen(false)} key={_.name}>
-            <h3 className='capitalize'>
+          <li
+            onClick={() =>
+              _.href !== '/rts-solutions'
+                ? setIsMenuOpen(false)
+                : setIsExpanded((p) => !p)
+            }
+            key={_.name}
+          >
+            <h3 className='capitalize text-2xl font-bold text-secondary hover:text-white leading-loose text-center '>
               <Link href={_.href}>{_.name}</Link>
             </h3>
+            {_.href === '/rts-solutions' &&
+              isExpanded &&
+              rtsSolutionPageLinks.map((link, idx) => (
+                <Motion
+                  initial={{ y: -30, opacity: 0 }}
+                  whileInView={{
+                    y: 0,
+                    opacity: 1,
+                    transition: { delay: 0.05 * idx },
+                  }}
+                  key={link.label}
+                  always
+                  className='  border-b last:border-b-0'
+                >
+                  <Link
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      setIsExpanded(false);
+                    }}
+                    href={
+                      '/rts-solutions/' +
+                      link.label.toLocaleLowerCase().replaceAll(' ', '-')
+                    }
+                    className='w-[119px] hover:text-white mx-auto block py-5 text-center text-secondary text-base'
+                  >
+                    Low Carbon Footprint Monofilament
+                  </Link>
+                </Motion>
+              ))}
           </li>
         ))}
-      </ul>
+      </Motion>
     </>
   );
 };
