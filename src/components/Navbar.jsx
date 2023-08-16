@@ -130,7 +130,7 @@ const NavContentMob = ({ setIsMenuOpen }) => {
                   }}
                   key={link.label}
                   always
-                  className='  border-b last:border-b-0'
+                  className='  border-b border-b-white/40 w-32 mx-auto last:border-b-0'
                 >
                   <Link
                     onClick={() => {

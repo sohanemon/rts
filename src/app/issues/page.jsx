@@ -11,7 +11,7 @@ export default async function IssuesPage() {
   return (
     <section className='bg-zinc-100'>
       <Hero />{' '}
-      <div className='flex container gap-5 pb-10 pt-32'>
+      <div className='flex container flex-wrap gap-5 pb-10 pt-32'>
         {tags.data.map((tag) => (
           <button
             key={tag.id}
