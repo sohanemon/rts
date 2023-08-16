@@ -93,7 +93,7 @@ const NavContentMob = ({ setIsMenuOpen }) => {
       <Motion
         initial='up'
         exit='up'
-        className='fixed bg-primary overflow-y-auto list-none p-7 inset-0 flex flex-col lg:hidden'
+        className='fixed z-50 bg-primary overflow-y-auto list-none p-7 inset-0 flex flex-col lg:hidden'
       >
         <Image
           src={'/img/x.svg'}
