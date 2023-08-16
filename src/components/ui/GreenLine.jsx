@@ -6,7 +6,7 @@ export default function GreenLine({ className }) {
     <Image
       src={`/img/green-line.svg`}
       className={cn(
-        'h-auto w-full z-10 object-cover absolute inset-x-0',
+        'h-auto w-full object-cover absolute inset-x-0',
         className,
         {}
       )}

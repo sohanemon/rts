@@ -43,7 +43,7 @@ const NavContent = () => {
           <li
             key={_.name}
             className={cn('hover:text-primary p-4', {
-              'hover:bg-secondary hover:h-auto h-min transition-all duration-300  rounded-md group/rts':
+              'hover:bg-secondary hover:h-auto h-min transition-all duration-300  rounded-md group/rts relative z-50':
                 _.href === '/rts-solutions',
               'text-primary':
                 _.href === '/' ? path === '/' : path.includes(_.href),

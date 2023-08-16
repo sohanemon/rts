@@ -1,11 +1,23 @@
+'use client';
 import Image from 'next/image';
-import ParallaxHero from '~/components/parallax-hero';
+import { useRef } from 'react';
+import Motion from '~/components/motion';
 import GreenLine from '~/components/ui/GreenLine';
+import useScrollTransform from '~/hook/scroll-transform';
 
 export function Hero() {
+  const target = useRef(null);
+  const yBg = useScrollTransform({
+    target,
+    offset: ['start start', 'end start'],
+    outputRange: [0, 300],
+  });
   return (
-    <div className='relative flex flex-col overflow-hidden items-center w-full text-center text-white gap-y-6 co'>
-      <ParallaxHero className={'w-full'}>
+    <div
+      ref={target}
+      className='relative flex flex-col overflow-hidden items-center w-full text-center text-white gap-y-6 co'
+    >
+      <Motion className={'w-full'}>
         <video
           className='hero w-full min-h-[500px]'
           autoPlay
@@ -14,7 +26,7 @@ export function Hero() {
           loop
           src='/bg.mp4'
         ></video>
-      </ParallaxHero>
+      </Motion>
       <div className='absolute inset-0 flex flex-col items-center justify-center '>
         <Image
           width={409}
@@ -23,10 +35,14 @@ export function Hero() {
           className=' max-sm:scale-[80%]'
           alt='RTS Logo Dark'
         />
-        <h2 className='text-2xl lg:text-[2.75rem] max-w-4xl mt-12 font-bold leading-[46px] drop-shadow-md'>
+        <Motion
+          as='h2'
+          style={{ y: yBg }}
+          className='text-2xl lg:text-[2.75rem] max-w-4xl mt-12 font-bold leading-[46px] drop-shadow-md'
+        >
           A Comprehensive Closed-loop Approach to Sustainability & Circular
           Economy
-        </h2>
+        </Motion>
       </div>
       <GreenLine className={'bottom-0'} />
     </div>
