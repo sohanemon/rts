@@ -14,13 +14,6 @@ export function Hero() {
           loop
           src='/bg.mp4'
         ></video>
-        {/* <Image
-          width={1409}
-          height={888}
-          className='hero'
-          src='/bg.gif'
-          alt='RTS Logo Dark'
-        /> */}
       </ParallaxHero>
       <div className='absolute inset-0 flex flex-col items-center justify-center '>
         <Image

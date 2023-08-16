@@ -40,18 +40,27 @@ export default function Card({ dark, white, data, className, noStripe }) {
         >
           {data?.title || 'The Truth About Microplastics in Textiles'}
         </h2>
-        <div
-          dangerouslySetInnerHTML={{ __html: data?.body }}
+        <p
           className={cn('font-medium text-opacity-80', { 'text-white': dark })}
         >
-          {/* 35% of microplastics found in the ocean come from synthetic fibers.
-          These synthetic fibers are sometimes referred to as filaments and
-          categorized into monofilament yarn or multifilament yarns. Their
-          application is versatile and vast, from footwear to outdoor products,
-          the lining in automobiles, consumer goods, and more. Though handy,
-          however, microplastics are released during the textile manufacturing
-          process and during use. */}
-        </div>
+          {data?.abstract || (
+            <>
+              {' '}
+              35% of microplastics found in the ocean come from synthetic
+              fibers. These synthetic fibers are sometimes referred to as
+              filaments and categorized into monofilament yarn or multifilament
+              yarns. Their application is versatile and vast, from footwear to
+              outdoor products, the lining in automobiles, consumer goods, and
+              more. Though handy, however, microplastics are released during the
+              textile manufacturing process and during use.
+            </>
+          )}
+        </p>
+        {data?.article_date && (
+          <p className='mt-6 text-neutral-400 text-sm font-bold'>
+            {data?.article_date}
+          </p>
+        )}
       </div>
     </Motion>
   );
