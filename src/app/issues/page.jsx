@@ -1,14 +1,12 @@
 import Card from '~/components/card';
 import Hero from './hero';
+import { siteConfig } from '~/config/site-config';
 
 export default async function IssuesPage() {
-  const res = await fetch(
-    'https://mgmt.retain2sustain.com/api/issues?populate=*'
-  );
+  const res = await fetch(`${siteConfig.baseUrl}/issues?populate=*`);
   const issues = await res.json();
-  const tagsRes = await fetch('https://mgmt.retain2sustain.com/api/tags');
+  const tagsRes = await fetch(`${siteConfig.baseUrl}/tags`);
   const tags = await tagsRes.json();
-  console.log('🛑 ~ IssuesPage ~ tags:', tags);
 
   return (
     <section className='bg-zinc-100'>
@@ -25,7 +23,13 @@ export default async function IssuesPage() {
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-10 pb-40 container'>
         {issues.data.map((issue) => (
-          <Card white noStripe data={issue.attributes} key={issue.id} />
+          <Card
+            white
+            noStripe
+            data={issue.attributes}
+            id={issue.id}
+            key={issue.id}
+          />
         ))}
       </div>
     </section>
