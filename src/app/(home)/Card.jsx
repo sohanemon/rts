@@ -12,7 +12,7 @@ export default function Card({
   return (
     <section
       className={cn(
-        'bg-primary relative shrink-0 z-10 mx-4 p-5 md:p-12 max-w-xl ',
+        'bg-primary relative shrink-0 mx-4 p-5 md:p-12 max-w-xl ',
         { 'bg-white': props.transparent, 'bg-secondary': props.secondary },
         className
       )}

@@ -1,12 +1,13 @@
 'use client';
 import Image from 'next/image';
+import { useRef } from 'react';
+import Motion from '~/components/motion';
+import useScrollTransform from '~/hook/scroll-transform';
 import Card from './Card';
 import { Hero } from './Hero';
-import Quote from './Quote';
 import LatestArticle from './LatestArticle';
-import Motion from '~/components/motion';
-import { useRef } from 'react';
-import useScrollTransform from '~/hook/scroll-transform';
+import Quote from './Quote';
+import GreenLine from '~/components/ui/GreenLine';
 
 export default function HomePage() {
   const target = useRef(null);
@@ -20,7 +21,7 @@ export default function HomePage() {
     <main ref={target} className='flex flex-col items-center justify-between'>
       <Hero />
       <Quote />
-      <div className='relative flex items-center md:-space-x-4 max-md:flex-col'>
+      <div className='relative flex items-center  max-md:flex-col'>
         <Motion>
           <Card
             {...data[0]}
@@ -41,7 +42,8 @@ export default function HomePage() {
         </Motion>
       </div>
       <br />
-      <div className='relative flex items-center md:-space-x-4 max-md:flex-col'>
+      <div className='relative flex items-center  max-md:flex-col'>
+        <GreenLine />
         <Motion>
           <Card
             {...data[1]}
@@ -62,7 +64,8 @@ export default function HomePage() {
         </Motion>
       </div>
       <br />
-      <div className='relative flex items-center md:-space-x-4 max-md:flex-col'>
+      <div className='relative flex items-center  max-md:flex-col'>
+        <GreenLine className={'scale-x-[-1]'} />
         <Motion>
           <Image
             src={
@@ -83,7 +86,7 @@ export default function HomePage() {
         </Motion>
       </div>
       <br />
-      <div className='relative flex items-center md:-space-x-4 max-md:flex-col'>
+      <div className='relative flex items-center  max-md:flex-col'>
         <Motion>
           <Card
             {...data[3]}
@@ -91,6 +94,7 @@ export default function HomePage() {
             className='-translate-y-16 md:-translate-y-0 max-md:absolute'
           />
         </Motion>
+
         <Motion style={{ y }}>
           <Image
             src={

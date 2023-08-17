@@ -20,7 +20,6 @@ export default function Quote({ className, ...props }) {
         )}
         {...props}
       >
-        <GreenLine className={'bottom-0'} />
         <Motion asChild style={{ x, opacity }}>
           <div className='relative '>
             <Image
