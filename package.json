@@ -24,7 +24,7 @@
     "tailwindcss": "3.3.2"
   },
   "devDependencies": {
-    "@types/node": "20.4.9",
+    "@types/node": "20.19.43",
     "@types/react": "18.2.19"
   }
 }
